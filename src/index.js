@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import "./App.css";
+import "./functionBased/App.css";
 
 //component files
-import TodoContainer from "./components/ToDoContainer.component";
-import About from "./pages/About";
-import NotMatch from "./pages/NotMatch";
-import Navbar from "./components/Navbar.component";
+import TodoContainer from "./functionBased/components/ToDoContainer.component";
+import About from "./functionBased/pages/About";
+import NotMatch from "./functionBased/pages/NotMatch";
+import Navbar from "./functionBased/components/Navbar.component";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
