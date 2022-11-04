@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 import "./functionBased/App.css";
 
@@ -13,13 +13,13 @@ import Navbar from "./functionBased/components/Navbar.component";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<TodoContainer />} />
         <Route path="/about/*" element={<About />} />
         <Route path="*" element={<NotMatch />} />
       </Routes>
-    </HashRouter>
+    </Router>
   </React.StrictMode>
 );
